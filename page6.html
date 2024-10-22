@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amaala Resorts</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0; /* خلفية رمادية فاتحة */
+            margin: 0;
+            padding: 0;
+            color: #333; /* لون النص الداكن */
+        }
+
+        /* شريط التنقل */
+        nav {
+            background-color: #000000; /* خلفية رمادية داكنة */
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* ظل للشريط */
+            font-size: 13px;
+        }
+
+        /* محاذاة Home و Back Page إلى اليسار */
+        .nav-left {
+            display: flex;
+            gap: 15px;
+        }
+
+        /* محاذاة Next Page إلى اليمين */
+        .nav-right {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        nav a {
+            color: #fff; /* نص أبيض */
+            text-decoration: none;
+            padding: 8px 15px;
+            transition: background-color 0.3s;
+            font-size: 1.3em;
+        }
+
+        nav a:hover {
+            background-color: #bab9b5; /* لون مميز عند التمرير */
+            color: #444;
+        }
+
+        /* صورة الهيدر */
+        header {
+            background: url('image/photo_5807519143040238835_y.jpg') no-repeat center center/cover;
+            height: 250px;
+            border: 4px solid #444;
+            margin-bottom: 20px;
+        }
+
+        /* العناوين الرئيسية */
+        h1, h2, h5 {
+            text-align: left;
+            color: #444; /* لون داكن */
+            margin-left: 20px;
+            font-size: 2rem;
+        }
+
+        /* زر Resorts مكان Our Resorts */
+        .resorts-btn {
+            display: block;
+            margin: 20px auto;
+            padding: 15px 30px;
+            background-color: #444; /* خلفية زر داكنة */
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.5em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .resorts-btn:hover {
+            background-color: #bab9b5; /* لون مميز عند التمرير */
+            color: #000000;
+        }
+
+        /* تنسيق للمنتجعات */
+        .resort {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .resort h2 {
+            color: #333;
+            font-size: 1.5rem;
+        }
+
+        .resort h5 {
+            font-size: 1.2rem;
+        }
+
+        /* الصور داخل المنتجعات */
+        .resort img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+
+        /* القوائم بدون خلفية وبدون شفافية */
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            padding: 0;
+            background: none;
+        }
+
+        ul li {
+            font-size: 1.2rem;
+        }
+
+        /* الفوتر */
+        footer {
+            background-color: #000000;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        footer a {
+            color: #ffc107;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- شريط التنقل -->
+    <nav>
+        <div class="nav-left">
+            <a href="Home.html">Home</a>
+            <a href="page5.html">Back Page</a>
+        </div>
+        <div class="nav-right">
+            <a href="page7.html">Next Page</a>
+        </div>
+    </nav>
+
+    <!-- الهيدر -->
+    <header></header>
+
+    <!-- زر Resorts -->
+    <button class="resorts-btn" onclick="scrollToResorts()">Discover Our Resorts</button>
+
+    <!-- المنتجعات -->
+
+    <!-- Resort 1 -->
+    <div class="resort" id="resorts">
+        <h5>Triple Bay</h5>
+        <h2>Clinique La Prairie AMAALA</h2>
+        <p>With nearly a century of history, Clinique La Prairie is renowned worldwide for its unique health philosophy and cutting-edge anti-aging scientific research. Opening in 2025 with 74 rooms, ultra-luxury suites, and 13 branded residences.</p>
+        <ul>
+            <li>Spa</li>
+            <li>Residences</li>
+            <li>Medical Wellness</li>
+            <li>Culinary Classes</li>
+        </ul>
+        <img src="image/photo_5807519143040238837_x.jpg" alt="Clinique La Prairie AMAALA">
+    </div>
+
+    <!-- Resort 2 -->
+    <div class="resort">
+        <h5>Triple Bay</h5>
+        <h2>Jayasom AMAALA</h2>
+        <p>Jayasom Wellness Resort in Triple Bay AMAALA is the destination wellness resort providing retreat stays for adults, families, and private residents. Opening in 2025 with 153 rooms and 24 branded residences.</p>
+        <ul>
+            <li>Spa</li>
+            <li>Wellness</li>
+            <li>Fitness</li>
+            <li>Family Friendly</li>
+        </ul>
+        <img src="image/photo_5807519143040238832_x (1).jpg" alt="Jayasom AMAALA">
+    </div>
+
+    <!-- Resort 3 -->
+    <div class="resort">
+        <h5>Triple Bay</h5>
+        <h2>Equinox AMAALA</h2>
+        <p>Equinox AMAALA focuses on sports, fitness, and lifestyle. Offering ultra-luxury moments with amenities like fine dining, a magnesium salt rooftop pool, and an Equinox Fitness Club. Opening in 2025 with 128 rooms.</p>
+        <ul>
+            <li>Marine Village</li>
+            <li>Rooftop Pool</li>
+            <li>Fitness</li>
+            <li>Beach Club</li>
+        </ul>
+        <img src="image/photo_5807519143040238830_x (1).jpg" alt="Equinox AMAALA">
+    </div>
+
+    <!-- Resort 4 -->
+    <div class="resort">
+        <h5>Triple Bay</h5>
+        <h2>Rosewood AMAALA</h2>
+        <p>Rosewood AMAALA offers a regenerative escape focused on wellness and sustainability. Opening in 2025 with 110 rooms and 26 branded residents.</p>
+        <ul>
+            <li>Spa</li>
+            <li>Wellness</li>
+            <li>Meditation</li>
+            <li>Fine Dining</li>
+        </ul>
+        <img src="image/photo_5807519143040238834_x.jpg" alt="Rosewood AMAALA">
+    </div>
+
+    <!-- Resort 5 -->
+    <div class="resort">
+        <h5>Triple Bay</h5>
+        <h2>The Four Seasons AMAALA</h2>
+        <p>The Four Seasons AMAALA offers unparalleled luxury service and experiences. Opening in 2025 with 202 rooms and 26 units.</p>
+        <ul>
+            <li>Spa</li>
+            <li>Wellness</li>
+            <li>Organic Garden</li>
+            <li>Residences</li>
+            <li>Golf</li>
+        </ul>
+        <img src="image/photo_5807519143040238836_x.jpg" alt="The Four Seasons AMAALA">
+    </div>
+
+    <!-- Resort 6 -->
+    <div class="resort">
+        <h5>Triple Bay</h5>
+        <h2>Six Senses AMAALA</h2>
+        <p>Six Senses AMAALA offers beachfront residences, a hillside village, and villas lining the private mangrove bay. Opening in 2025 with 100 rooms and suites, 25 branded residences, and 30 villas.</p>
+        <ul>
+            <li>            <li>Arts & Culture</li>
+            <li>Spa</li>
+            <li>Wellness</li>
+            <li>Meditation</li>
+            <li>Residences</li>
+        </ul>
+        <img src="image/photo_5807519143040238829_x.jpg" alt="Six Senses AMAALA">
+    </div>
+
+    <!-- الفوتر -->
+    <footer>
+        <p>© Sustainability and Technology: New Cities in Vision 2030 | All Rights Reserved<p>
+        <p><i><b>For more information, visit the <a href="https://www.vision2030.gov.sa">Saudi Vision 2030</a> website.</b></i></p>
+        <p>This page was last modified on: 
+            <script>
+              document.write(document.lastModified);
+            </script>
+
+
+
+    </footer>
+
+    <!-- إضافة سكريبت للتمرير إلى قسم المنتجعات -->
+    <script>
+        function scrollToResorts() {
+            const resortsSection = document.getElementById("resorts");
+            resortsSection.scrollIntoView({ behavior: "smooth" });
+        }
+    </script>
+
+</body>
+</html>

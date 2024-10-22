@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red Sea Resorts</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+           
+            color: #fffbfb;
+        }
+/* شريط التنقل */
+.main-header {
+    background-color: #000; /* الخلفية سوداء */
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-nav-left, .main-nav-right {
+    display: flex;
+    gap: 20px;
+}
+
+.main-nav button {
+    background-color: transparent; /* لا خلفية للزر */
+    border: none; /* إزالة الإطار */
+    color: #fff; /* النص أبيض */
+    font-size: 1.2em;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: color 0.3s ease; /* تأثير على اللون عند التمرير */
+}
+
+.main-nav button:hover {
+    color: #ffcc00; /* النص يتغير إلى اللون الأصفر عند التمرير */
+}
+
+        /* قسم المنتجعات */
+        .resorts-section {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            padding: 50px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .resort-box {
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            max-width: 800px;
+            height: 350px;
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .resort-box:hover {
+            transform: scale(1.05);
+        }
+
+        .resort-info {
+            position: absolute;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 20px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .resort-info h2 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        .resort-info p {
+            font-size: 1.1em;
+        }
+
+        /* الفوتر */
+        footer {
+            background-color: #000;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            font-size: 1.2em;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- شريط التنقل -->
+    <header class="main-header">
+        <nav class="main-nav main-nav-left">
+            <button onclick="window.location.href='home.html'">Home</button>
+            <button onclick="window.location.href='page9.html'">Back Page</button>
+        </nav>
+        <nav class="main-nav main-nav-right">
+            <button onclick="window.location.href='page11.html'">Next Page</button>
+        </nav>
+    </header>
+
+    <!-- قسم المنتجعات -->
+    <section class="resorts-section">
+        <div class="resort-box" style="background-image: url('image/photo_5818987676383167224_y.jpg');">
+            <div class="resort-info">
+                <h2>Six Senses Southern Dunes, The Red Sea</h2>
+                <p>This resort is set amidst the breathtaking southern dunes of the Red Sea, offering luxurious accommodations with a perfect balance of comfort and nature.</p>
+            </div>
+        </div>
+
+        <div class="resort-box" style="background-image: url('image/IMG_8592 (2).PNG');">
+            <div class="resort-info">
+                <h2>The St. Regis Red Sea Resort</h2>
+                <p>Find your sanctuary on the secluded Ummahat Island, offering avant-garde villas, a kids club, fitness centers, and a luxurious spa.</p>
+            </div>
+        </div>
+
+        <div class="resort-box" style="background-image: url('image/IMG_8590 (1).JPG');">
+            <div class="resort-info">
+                <h2>Nujuma, a Ritz-Carlton Reserve</h2>
+                <p>Nujuma offers the ultimate in luxury, providing privacy, exclusivity, and a serene connection with nature on pristine beaches and waters.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p><i><b>For more information, visit the <a href="https://www.vision2030.gov.sa">Saudi Vision 2030</a> website.</b></i></p>
+        <p>© Sustainability and Technology: New Cities in Vision 2030 | All Rights Reserved</p>
+        <p><h5>This page was last modified on: 
+            <script>
+              document.write(document.lastModified);
+            </script>
+    </footer>
+
+</body>
+</html>

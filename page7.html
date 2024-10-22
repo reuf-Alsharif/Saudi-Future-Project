@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Al-Qiddiyah</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        /* شريط التنقل */
+        nav {
+            background-color: #000000;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        nav a {
+            color: #f6f5f2; /* لون النص أصفر */
+            text-decoration: none;
+            padding: 10px 20px;
+            transition: background-color 0.3s;
+            font-size: 1.1em;
+            border-radius: 5px;
+        }
+
+        nav a:hover {
+            background-color: #FFD700; /* تغيير اللون عند التمرير */
+            color: #333;
+        }
+
+        .nav-left {
+            display: flex;
+            gap: 10px; /* مسافة بين "Home" و "Book Tickets" */
+        }
+
+        .nav-right {
+            margin-left: auto; /* يدفع "Next Page" إلى أقصى اليمين */
+        }
+
+        /* قسم الترحيب مع صورة في الهيدر */
+        .intro-section {
+            background-color: #333; /* خلفية سوداء */
+            color: #f3f3ec; /* نص أصفر */
+            
+            padding: 50px 20px;
+            text-align: center;
+           
+        }
+
+        .intro-section h1 { 
+            font-size: 5rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .intro-section p {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* الأنشطة */
+        .activities {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            padding: 50px 20px;
+            background-color: #fff;
+        }
+
+        .activity {
+            background-color: #faf4d3; /* خلفية أصفر */
+            border: 2px solid #333; /* إطار أسود */
+            border-radius: 12px;
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .activity:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .activity img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .activity h3 {
+            font-size: 1.5rem;
+            margin: 15px 0;
+            color: #333;
+        }
+
+        .activity button {
+            background-color: #333;
+            color: #FFD700;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-top: 10px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .activity button:hover {
+            background-color: #555;
+            transform: scale(1.05);
+        }
+
+        /* قسم المعلومات */
+        .info-section {
+            background-color: #f9f9f9;
+            padding: 40px 20px;
+            display: none;
+            text-align: center;
+            transition: opacity 0.5s;
+        }
+
+        .info-section h2 {
+            font-size: 2.2rem;
+            color: #070707; /* أصفر */
+            margin-bottom: 20px;
+        }
+
+        .info-section p {
+            font-size: 1.2rem;
+            color: #333;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .info-section.show {
+            display: block;
+            opacity: 1;
+        }
+
+        /* الفوتر */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        footer a {
+            color: #FFD700; /* أصفر */
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* لمسة إضافية */
+        .highlight {
+            background-color: #FFD700; /* خلفية أصفر */
+            color: #333;
+            padding: 5px 10px;
+            border-radius: 3px;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        
+    </style>
+</head>
+<body>
+
+    <!-- شريط التنقل -->
+    <nav>
+        <div class="nav-left">
+            <a href="Home.html">Home</a>
+            <a href="page8.html">Book Tickets</a>
+        </div>
+        <div class="nav-right">
+            <a href="page6.html">Back Page</a>
+        </div>
+    </nav>
+
+    <!-- قسم الترحيب مع صورة في الهيدر -->
+    <section class="intro-section">
+        <h1>Welcome to Al-Qiddiyah</h1>
+       
+
+    <!-- الأنشطة الترفيهية -->
+    <section class="activities">
+        <div class="activity">
+            <img src="image/P48_4290_SFAA_SixFlags_Aerial_Night_v3.webp" alt="Theme Park">
+            <h3>Theme Parks</h3>
+            <button onclick="showInfo('themeParks')">Explore More</button>
+        </div>
+        <div class="activity">
+            <img src="image/6.jpg" alt="Sports Stadium">
+            <h3>Sports Stadiums</h3>
+            <button onclick="showInfo('sportsStadiums')">Learn More</button>
+        </div>
+        <div class="activity">
+            <img src="image/61126.jpg" alt="Adventure Zone">
+            <h3>Adventure Zones</h3>
+            <button onclick="showInfo('adventureZones')">Discover Now</button>
+        </div>
+    </section>
+
+    <!-- قسم المعلومات -->
+    <section id="info-section" class="info-section">
+        <h2 id="info-title">Section Title</h2>
+        <p id="info-text">Here you will find detailed information about the selected section.</p>
+        <div id="highlight-info" class="highlight" style="display: none;">Special Attractions in this Section!</div>
+    </section>
+
+    <!-- الفوتر -->
+    <footer>
+        <p>For more information, visit the <a href="https://www.vision2030.gov.sa">Saudi Vision 2030</a> website.</p>
+        <p>&copy; 2024 Al-Qiddiyah Project - All Rights Reserved</p>
+        <p><h5>This page was last modified on: 
+            <script>
+              document.write(document.lastModified);
+            </script>
+    </footer>
+
+    <!-- سكريبت لعرض المعلومات عند الضغط -->
+    <script>
+        function showInfo(section) {
+            const infoSection = document.getElementById('info-section');
+            const infoTitle = document.getElementById('info-title');
+            const infoText = document.getElementById('info-text');
+            const highlight = document.getElementById('highlight-info');
+
+            if (section === 'themeParks') {
+                infoTitle.innerText = 'Theme Parks';
+                infoText.innerText = 'Al-Qiddiyah’s theme parks offer thrilling rides, live entertainment, and immersive experiences for all ages. Experience the excitement in a world-class environment.';
+                highlight.style.display = 'block';
+                highlight.innerText = 'Check out the special night shows at the theme park!';
+            } else if (section === 'sportsStadiums') {
+                infoTitle.innerText = 'Sports Stadiums';
+                infoText.innerText = 'Watch your favorite teams compete at world-class sports stadiums, with cutting-edge facilities and state-of-the-art arenas that cater to a variety of sports.';
+                highlight.style.display = 'block';
+                highlight.innerText = 'Exclusive sports events happening this season!';
+            } else if (section === 'adventureZones') {
+                infoTitle.innerText = 'Adventure Zones';
+                infoText.innerText = 'For thrill-seekers, the adventure zones offer extreme sports, climbing walls, zip lines, and much more                 to fuel your adrenaline rush. Join in on the adventure challenge for a chance to win exciting prizes!';
+                highlight.style.display = 'block';
+                highlight.innerText = 'Join the adventure challenge to win exciting prizes!';
+            }
+
+            infoSection.classList.add('show');
+        }
+    </script>
+
+</body>
+</html>

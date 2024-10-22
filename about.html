@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meet Our Leaders</title>
+    <style>
+        /* إعدادات عامة */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9; /* خلفية فاتحة */
+            color: #333; /* لون النص */
+            overflow-x: hidden;
+        }
+
+        /* شريط التنقل */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgb(26, 26, 26); /* خلفية شفافة */
+            padding: 15px 50px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 8px rgba(247, 246, 246, 0.1); /* ظل خفيف */
+        }
+
+        nav a {
+            color: #f7f6f6;
+            text-decoration: none;
+            font-size: 1rem;
+            margin-left: 20px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #262626; /* تغيير لون الرابط عند المرور */
+        }
+
+        /* قسم الهيرو */
+        .hero-section {
+            padding: 100px 20px;
+            text-align: center;
+            background-image: url('image/header-image.jpg'); /* صورة الهيدر الجديدة */
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            position: relative;
+            border-bottom: 5px solid #76748a;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0); /* تدرج لوني فوق الصورة */
+        }
+
+        .hero-section h1 {
+            font-size: 3rem;
+            color: #fffbfb;
+            position: relative;
+            z-index: 2;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .hero-section p {
+            font-size: 1.3rem;
+            color: #ddd;
+            margin-top: 20px;
+            position: relative;
+            z-index: 2;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* صورة الفريق */
+        .header-image {
+            width: 100px; /* حجم أصغر للصورة */
+            margin-top: 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* قسم الفريق */
+        .team-section {
+            background-color: #ffffff; /* خلفية فاتحة */
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .team-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            color: #000000; /* لون مميز للعنوان */
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .team-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            padding: 0 50px;
+        }
+
+        .team-member {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* ظل خفيف */
+            border-top: 3px solid #e8d6df;
+        }
+
+        .team-member:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(26, 26, 26, 0.364);
+        }
+
+        .team-member h3 {
+            color: #333;
+            font-size: 1.7rem;
+            margin-bottom: 10px;
+        }
+
+        .team-member p {
+            color: #8a8700;
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+
+        .team-member a {
+            color: #000000;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        .team-member a:hover {
+            color: #edf2f4;
+        }
+
+        /* الفوتر */
+        footer {
+            background-color: #000000;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            font-size: 0.9rem;
+            margin-top: 50px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        footer a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            color: #6c6b6b;
+        }
+
+        /* تحسين التنسيق لأحجام الشاشات الصغيرة */
+        @media (max-width: 768px) {
+            .team-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+
+/* قسم الهيرو */
+.hero-section {
+    width: 100%;
+    height: auto; /* السماح للقسم بأن يتكيف مع حجم الصورة */
+    display: flex;
+    justify-content: center; /* وضع الصورة في الوسط أفقياً */
+    align-items: center; /* وضع الصورة في الوسط عمودياً */
+    padding: 50px 0; /* مسافة من الأعلى والأسفل */
+    background-color: #ffffff; /* لون الخلفية اختياري */
+}
+
+.header-image {
+    width: auto;
+    height: 70vh; /* تحديد ارتفاع مناسب للصورة */
+    max-width: 100%; /* لمنع تجاوز العرض */
+    object-fit: contain; /* احتواء الصورة داخل القسم */
+    border-radius: 10px; /* زوايا مستديرة بشكل بسيط */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* إضافة ظل للصورة لتبدو أجمل */
+}
+
+    </style>
+</head>
+<body>
+
+    <!-- شريط التنقل -->
+    <nav>
+        <div>
+            <a href="home.html">Home</a>
+        </div>
+    </nav>
+
+    <!-- قسم الهيرو -->
+    <section class="hero-section">
+        <img src="image/Saudi-Arabian-Women.jpg" alt="Header Image" class="header-image">
+    </section>
+
+    <!-- قسم الفريق -->
+    <section class="team-section">
+        <h2>The Women Behind Saudi Future Projects</h2>
+        <div class="team-container">
+            <div class="team-member">
+                <h3>REUF ALSHRIF</h3>
+                <p>Data Science students in UQU</p>
+                <p>we are excited to apply our knowledge to real-world challenges and contribute to the ever-evolving field of data science.</p>
+                <a href="https://www.linkedin.com/in/ruof-alshreef-807a9a274">View LinkedIn</a>
+            </div>
+
+            <div class="team-member">
+                <h3>FAJR ALZAHRANI</h3>
+                <p>Data Science students in UQUn</p>
+                <p>we are excited to apply our knowledge to real-world challenges and contribute to the ever-evolving field of data science.</p>
+                <a href="linkedin.com/fatima-al-mutairi">View LinkedIn</a>
+            </div>
+
+            <div class="team-member">
+                <h3>JANA ALHLESS</h3>
+                <p>Data Science students in UQU</p>
+                <p>we are excited to apply our knowledge to real-world challenges and contribute to the ever-evolving field of data science.</p>
+                <a href="https://www.linkedin.com/in/%D8%AC%D9%86%D9%89-%D8%A7%D9%84%D8%AD%D9%84%D9%8A%D8%B3-a97386273?trk=contact-info">View LinkedIn</a>
+            </div>
+
+            <div class="team-member">
+                <h3>MAYAR ALOWAYDI</h3>
+                <p>Data Science students in UQU</p>
+                <p>we are excited to apply our knowledge to real-world challenges and contribute to the ever-evolving field of data science.</p>
+                <a href="https://www.linkedin.com/in/mayar-alowaydhi-6613a1275?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app">View LinkedIn</a>
+            </div>
+
+            <div class="team-member">
+                <h3>NAHLA ALOSIMII</h3>
+                <p>Data Science students in UQU</p>
+                <p>we are excited to apply our knowledge to real-world challenges and contribute to the ever-evolving field of data science.</p>
+                <a href="https://www.linkedin.com/in/nahla-alosimi-b68a6b273?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app">View LinkedIn</a>
+            </div>
+
+            <div class="team-member">
+                <h3>AMANY FALLATAH</h3>
+                <p>Data Science students in UQU</p>
+                <p>we are excited to apply our knowledge to real-world challenges and contribute to the ever-evolving field of data science.</p>
+                <a href="https://www.linkedin.com/in/amany-fallatah-a379b1334?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app">View LinkedIn</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- الفوتر -->
+    <footer>
+        <p><i><b>For more information, visit the <a href="https://www.vision2030.gov.sa">Saudi Vision 2030</a> website.</b></i></p>
+        <p>© Sustainability and Technology: New Cities in Vision 2030 | All Rights Reserved</p>
+        <p><h5>This page was last modified on: 
+            <script>
+              document.write(document.lastModified);
+            </script>
+    </footer>
+
+</body>
+</html>

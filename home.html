@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saudi Future Projects</title>
+    <style>
+        /* إعدادات عامة للخطوط والألوان */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #000; /* لون خلفية داكن */
+            color: #86770a; /* لون النص أبيض */
+            overflow-x: hidden;
+        }
+
+        /* شريط التنقل */
+        nav {
+            display: flex;
+           
+            align-items: center;
+            background-color: #121212; /* خلفية شفافة للشريط */
+            padding: 15px 50px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            margin-left: 20px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #808688;
+        }
+
+        /* الشعار */
+        nav img {
+            height: 40px; /* حجم اللوغو */
+           
+           
+        }
+
+        /* الهيدر الرئيسي */
+        header {
+            height: 100vh;
+            background-image: url('image/The-Line.webp');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+           
+        }
+
+        /* تأثير خلفية متدرج على الهيدر */
+        .header-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .header-content h1 {
+            font-size: 3rem;
+            color: #fff;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .header-content p {
+            font-size: 1.2rem;
+            color: #ddd;
+            margin-top: 20px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .header-content a {
+            text-decoration: none;
+            color: white;
+            background-color: #00c2ff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: background-color 0.3s;
+            margin-top: 30px;
+            display: inline-block;
+        }
+
+        .header-content a:hover {
+            background-color: #005f80;
+        }
+
+        /* قسم المشاريع */
+        section.projects {
+            padding: 80px 20px;
+            text-align: center;
+            background-color: #111; /* خلفية داكنة */
+            color: #fff;
+        }
+
+        section.projects h2 {
+            font-size: 2.8rem;
+            margin-bottom: 40px;
+        }
+
+        .project-grid {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .project-item {
+            background-color: #222;
+            padding: 30px;
+            border-radius: 15px;
+            width: 200px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .project-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .project-item a {
+            color: inherit;
+            text-decoration: none;
+            font-size: 1.3rem;
+        }
+
+        /* صفحة التواصل */
+        .contact-page {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        .header-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .header-content h1 {
+            font-size: 3rem;
+            color: #ffffff;
+            background-color: #5f5634;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .header-content p {
+            font-size: 1.5rem;
+            color: #ffffff;
+            background-color: #5f5634;
+            margin-top: 20px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .header-content a {
+            text-decoration: none;
+            color: rgb(0, 0, 0);
+            background-color: #edeeef;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: background-color 0.3s;
+            margin-top: 30px;
+            display: inline-block;
+        }
+
+        .header-content a:hover {
+            background-color: #005f80;
+        }
+
+        /* قسم المشاريع */
+        section.projects {
+            padding: 80px 20px;
+            text-align: center;
+            background-color: #111; /* خلفية داكنة */
+            color: #fff;
+        }
+
+        section.projects h2 {
+            font-size: 2.8rem;
+            margin-bottom: 40px;
+        }
+
+        .project-grid {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .project-item {
+            background-color: #222;
+            padding: 30px;
+            border-radius: 15px;
+            width: 200px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .project-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .project-item a {
+            color: inherit;
+            text-decoration: none;
+            font-size: 1.3rem;
+        }
+/* صفحة التواصل */
+/* صفحة التواصل */
+.contact-page {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* خلفية داكنة مع شفافية */
+    display: none; /* إخفاء الصفحة افتراضيًا */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.contact-container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    width: 50%;
+    max-width: 600px; /* تحديد عرض أقصى ليبدو متناسقًا على الشاشات الأكبر */
+    text-align: center;
+    color: black;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* إضافة ظل للتمييز */
+}
+
+.contact-container h3 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    color: #333;
+}
+
+.contact-container input[type="text"], 
+.contact-container input[type="email"], 
+.contact-container textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    box-sizing: border-box; /* لضمان أن الحقول متناسقة تمامًا */
+}
+
+.contact-container textarea {
+    height: 120px;
+}
+
+.contact-buttons {
+    display: flex;
+    justify-content: space-between; /* محاذاة الأزرار بشكل مرتب */
+    margin-top: 20px;
+}
+
+.contact-buttons input[type="submit"], 
+.contact-buttons button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    background-color: #f4fcff;
+    color: #fff;
+    transition: background-color 0.3s;
+    width: 48%; /* عرض متساوٍ للأزرار */
+}
+
+.contact-buttons button {
+    background-color: #f44336;
+}
+
+.contact-buttons input[type="submit"]:hover,
+.contact-buttons button:hover {
+    background-color: #f9fcfc; /* لون متغير عند التمرير */
+}
+
+.contact-info {
+    margin-top: 20px;
+    font-size: 1rem;
+    color: #555;
+}
+        .contact-container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 15px;
+            width: 50%;
+            text-align: center;
+            color: black;
+        }
+
+        .contact-container input[type="text"], 
+        .contact-container input[type="email"], 
+        .contact-container textarea {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .contact-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .contact-buttons input[type="submit"], 
+        .contact-buttons button {
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            background-color: #00c2ff;
+            color: #fff;
+            transition: background-color 0.3s;
+        }
+
+        .contact-buttons button {
+            background-color: #f44336;
+        }
+
+        .contact-buttons input[type="submit"]:hover,
+        .contact-buttons button:hover {
+            background-color: #dde8ec;
+        }
+
+        /* الفوتر */
+        footer {
+            background-color: #111;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        /* نموذج تسجيل الدخول بشكل أفقي */
+        .login-container {
+            margin: 100px auto;
+            width: 90%;
+            max-width: 600px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 40px;
+            display: flex;
+            justify-content: space-between; /* توزيع الحقول بالتساوي */
+            gap: 50px; /* مسافة بين الحقول */
+            color: #000;
+        }
+
+        .login-container input[type="text"],
+        .login-container input[type="email"],
+        .login-container input[type="password"] {
+            flex: 1; /* جعل الحقول بنفس الحجم */
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .login-container input[type="submit"] {
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        .login-container input[type="submit"]:hover {
+            background-color: #555;
+        }
+
+
+        
+    </style>
+</head>
+<body>
+
+    <audio controls autoplay>
+        <source src="__تشويقة_إنجازات_مشروع_البحر_الأحمر_mp3_.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- شريط التنقل مع اللوغو -->
+    <nav>
+
+        <div>
+            <a href="about.html">About as</a>
+            <a onclick="toggleContact()">Contact Us</a> <!-- رابط التواصل -->
+        </div>
+    </nav>
+
+    <!-- الهيدر الرئيسي -->
+    <header>
+        <div class="header-content">
+            <img src="image/Night_City__1_-removebg-preview.png" alt="Header Image" style="width: 300px; height: auto; margin-bottom: 20px; background-color:#ffffff00 ">
+            <h1>Saudi Arabia's Future Projects</h1>
+            <p>Discover the most ambitious projects shaping the future of Saudi Arabia as part of Vision 2030.</p>
+            <a href="page1.html">Explore Projects</a>
+        </div>
+    </header>
+
+    <!-- نموذج تسجيل الدخول بشكل أفقي -->
+    <section class="login-container">
+        <form onsubmit="redirectToPage(event)">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="submit" value="Login">
+        </form>
+    </section>
+
+    <!-- قسم المشاريع -->
+    <section class="projects">
+        <h2>Future Saudi Projects </h2>
+        <div class="project-grid">
+            <div class="project-item">
+                <a href="page1.html">The Line</a>
+            </div>
+            <div class="project-item">
+                <a href="page3.html">NEOM</a>
+            </div>
+            <div class="project-item">
+                <a href="red-sea-project.html">Red Sea Project</a>
+            </div>
+            <div class="project-item">
+                <a href="qiddiya.html">Qiddiya</a>
+            </div>
+            <div class="project-item">
+                <a href="page5.html">AMAALA</a>
+            </div>
+            <div class="project-item">
+                <a href="alula.html">AlUla</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- صفحة التواصل -->
+    <div class="contact-page" id="contactPage">
+        <div class="contact-container">
+            <h3>Contact Us</h3>
+            <form>
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+
+                <div class="contact-buttons">
+                    <input type="submit" value="Send">
+                    <button type="button" onclick="cancelForm()">Cancel</button> <!-- زر الإلغاء -->
+                </div>
+            </form>
+
+            <div class="contact-info">
+                <p>Email: info@saudifutureprojects.com</p>
+                <p>Phone: +966 123 456 789</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- الفوتر -->
+    <footer>
+        <p><i><b>For more information, visit the <a href="https://www.vision2030.gov.sa">Saudi Vision 2030</a> website.</b></i></p>
+        <p>© Sustainability and Technology: New Cities in Vision 2030 | All Rights Reserved</p>
+        <p><h5>This page was last modified on: 
+            <script>
+              document.write(document.lastModified);
+            </script>
+    </footer>
+
+    <script>
+        // دالة لتحويل المستخدم بعد تسجيل الدخول
+        function redirectToPage(event) {
+            event.preventDefault(); // منع إعادة تحميل الصفحة
+            window.location.href = "page1.html"; // تحويل المستخدم إلى الصفحة المطلوبة
+        }
+
+        // دالة لإظهار وإخفاء صفحة التواصل
+        function toggleContact() {
+            var contactPage = document.getElementById("contactPage");
+            if (contactPage.style.display === "none" || contactPage.style.display === "") {
+                contactPage.style.display = "flex"; // إظهار صفحة التواصل
+            } else {
+                contactPage.style.display = "none"; // إخفاء صفحة التواصل
+            }
+        }
+
+        // دالة لإلغاء تعبئة نموذج التواصل
+        function cancelForm() {
+            var contactPage = document.getElementById("contactPage");
+            contactPage.style.display = "none"; // إخفاء صفحة التواصل عند النقر على زر الإلغاء
+        }
+    </script>
+
+</body>
+</html>

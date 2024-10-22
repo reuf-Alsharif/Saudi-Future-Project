@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Al-Qiddiyah Ticket Booking</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: url('image/photo_5816735876569483203_y.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        /* شريط التنقل */
+        nav {
+            background-color: rgb(0, 0, 0);
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .nav-left {
+            display: flex;
+            gap: 15px;
+        }
+
+        .nav-right {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 8px 15px;
+            transition: background-color 0.3s;
+            font-size: 1.1em;
+        }
+
+        nav a:hover {
+            background-color: #bab9b5;
+            color: #444;
+        }
+
+        /* العنوان */
+        header {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 100px 20px;
+            text-align: center;
+            color: white;
+            border-bottom: 4px solid #444;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin: 0;
+            color: #fff;
+        }
+
+        /* قسم حجز التذاكر */
+        .booking-section {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            margin: 30px auto;
+            max-width: 800px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .booking-section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #333;
+            text-align: center;
+        }
+
+        .booking-section form label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .booking-section form input, 
+        .booking-section form select {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 1rem;
+        }
+
+        .booking-section form input[type="submit"] {
+            background-color: #afa74c;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: background-color 0.3s;
+        }
+
+        .booking-section form input[type="submit"]:hover {
+            background-color: #313231;
+        }
+
+        /* قسم تفاصيل التذكرة */
+        .ticket-details {
+            display: none;
+            background-color: #fff;
+            padding: 40px;
+            margin: 90px auto;
+            max-width: 300px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            
+            position: relative;
+        }
+
+        .ticket-icon {
+            font-size: 5rem;
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+
+        .ticket-details h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #333;
+            position: relative;
+        }
+
+        .ticket-details .content {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .ticket-details p {
+            font-size: 1.3rem;
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .ticket-details p span {
+            font-weight: bold;
+            color: #333;
+        }
+
+      
+
+    
+
+        /* تذييل الصفحة */
+        footer {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        footer a {
+            color: #ffc107;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- شريط التنقل -->
+    <nav>
+        <div class="nav-left">
+            <a href="Home.html">Home</a>
+            <a href="page7.html">Back Page</a>
+        </div>
+        <div class="nav-right">
+            <a href="page9.html">Next Page</a>
+        </div>
+    </nav>
+
+    <!-- الهيدر -->
+    <header>
+        <h1>Book Your Ticket to Al-Qiddiyah</h1>
+    </header>
+
+    <!-- قسم حجز التذاكر -->
+    <section class="booking-section" id="bookingSection">
+        <h2>Ticket Booking Form</h2>
+        <form id="bookingForm" onsubmit="showTicketDetails(event)">
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" name="fullName" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="date">Date of Visit</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="tickets">Number of Tickets</label>
+            <select id="tickets" name="tickets" required>
+                <option value="1">1 Ticket</option>
+                <option value="2">2 Tickets</option>
+                <option value="3">3 Tickets</option>
+                <option value="4">4 Tickets</option>
+                <option value="5">5 Tickets</option>
+                <option value="6">6 Tickets</option>
+            </select>
+
+            <label for="ageGroup">Age Group</label>
+            <select id="ageGroup" name="ageGroup" required>
+                <option value="adult">Adult (18+)</option>
+                <option value="child">Child (6-17)</option>
+                <option value="infant">Infant (0-5)</option>
+            </select>
+
+            <input type="submit" value="Book Now">
+        </form>
+    </section>
+
+    <!-- قسم تفاصيل التذكرة -->
+    <section class="ticket-details" id="ticketDetails">
+        <div class="ticket-icon">🎟️</div>
+        <h2>Your Ticket</h2>
+        <div class="ticket-corners"></div>
+        <div class="ticket-corners-bottom"></div>
+        <div class="content">
+            <p><span>Full Name:</span> <span id="ticketFullName"></span></p>
+            <p><span>Email:</span> <span id="ticketEmail"></span></p>
+            <p><span>Date of Visit:</span> <span id="ticketDate"></span></p>
+            <p><span>Number of Tickets:</span> <span id="ticketNumber"></span></p>
+            <p><span>Age Group:</span> <span id="ticketAgeGroup"></span></p>
+        </div>
+    </section>
+
+    <!-- تذييل الصفحة -->
+    <footer>
+        <p><i><b>For more information, visit the <a href="https://www.vision2030.gov.sa">Saudi Vision 2030</a> website.</b></i></p>
+        <p>© Sustainability and Technology: New Cities in Vision 2030 | All Rights Reserved</p>
+        <p><h5>This page was last modified on: 
+            <script>
+              document.write(document.lastModified);
+            </script>
+    </footer>
+
+        <!-- سكريبت لعرض تفاصيل التذكرة -->
+        <script>
+            function showTicketDetails(event) {
+                event.preventDefault(); // منع إعادة تحميل الصفحة
+    
+                // إخفاء نموذج الحجز
+                document.getElementById('bookingSection').style.display = 'none';
+    
+                // عرض تفاصيل التذكرة
+                document.getElementById('ticketDetails').style.display = 'block';
+    
+                // الحصول على البيانات المدخلة
+                const fullName = document.getElementById('fullName').value;
+                const email = document.getElementById('email').value;
+                const date = document.getElementById('date').value;
+                const tickets = document.getElementById('tickets').value;
+                const ageGroup = document.getElementById('ageGroup').value;
+    
+                // عرض البيانات في قسم التفاصيل
+                document.getElementById('ticketFullName').innerText = fullName;
+                document.getElementById('ticketEmail').innerText = email;
+                document.getElementById('ticketDate').innerText = date;
+                document.getElementById('ticketNumber').innerText = tickets;
+                document.getElementById('ticketAgeGroup').innerText = ageGroup;
+            }
+        </script>
+    
+    </body>
+    </html>

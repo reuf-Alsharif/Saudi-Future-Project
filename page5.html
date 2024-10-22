@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amaala</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0; /* Light gray background */
+            margin: 0;
+            padding: 0;
+            color: #333; /* Dark text color */
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            display: flex;
+            justify-content: space-between; /* Distribute space between elements */
+            align-items: center;
+            background-color: #000000; /* Dark gray */
+            padding: 15px 30px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow for navbar */
+        }
+
+        .navbar a {
+            color: #fff; /* White text */
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 1.1em;
+            padding: 5px 10px;
+            border-radius: 5px; /* Rounded corners */
+            transition: background-color 0.3s;
+        }
+
+        .navbar a:hover {
+            background-color: #bab9b5; /* Gold on hover */
+            color: #444; /* Dark gray */
+        }
+
+     
+
+        header h1 {
+            font-size: 4em; /* Larger font size for header */
+            margin: 0; /* Remove default margin */
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Text shadow for better readability */
+        }
+
+        /* Main Video */
+        video {
+            max-width: 100%; /* Make video responsive */
+            height: auto;
+            display: block; /* Center video */
+            margin: 20px auto; /* Center with margin */
+            border-radius: 8px; /* Rounded corners */
+            border: 4px solid #444; /* Dark gray border */
+        }
+
+        /* Welcome Section */
+        .welcome-section {
+            text-align: center;
+            margin: 40px auto;
+            padding: 20px;
+            max-width: 800px; /* Max width for the welcome section */
+            background-color: #fff; /* White background */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow for the box */
+        }
+
+        .welcome-section h2 {
+            font-size: 3em; /* Larger font size */
+            color: #444;
+            margin-bottom: 20px;
+        }
+
+        .welcome-section p {
+            font-size: 1.2em;
+            color: #555;
+        }
+
+        /* Content Section */
+        .content-section {
+            background-color: #ffffff; /* White */
+            padding: 30px;
+            margin: 20px auto; /* Vertical margin for separation */
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Enhanced shadow */
+            max-width: 800px; /* Max width for content */
+        }
+
+        .content-section h2 {
+            color: #333; /* Dark text for contrast */
+            margin-bottom: 15px;
+            font-size: 2em; /* Larger font size for headings */
+        }
+
+        .content-section img {
+            max-width: 100%; /* Make images responsive */
+            height: auto;
+            margin: 15px 0; /* Spacing around images */
+            border-radius: 8px; /* Rounded corners */
+        }
+
+        /* Footer */
+        footer {
+            background-color: #000000; /* Dark gray */
+            color: white;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Shadow for footer */
+            position: relative; /* Ensures footer is always at the bottom */
+        }
+
+        footer a {
+            color: #ffc107; /* Gold */
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2.5em; /* Smaller font size on mobile */
+            }
+
+            .navbar {
+                flex-direction: column; /* Stack links on smaller screens */
+                align-items: flex-start; /* Align links to the left */
+            }
+
+            .navbar a {
+                margin: 5px 0; /* Vertical spacing */
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <div>
+            <a href="Home.html">Home</a>
+            <a href="page4.html">Back Page</a>
+        </div>
+        <a href="page6.html">Next Page</a>
+    </div>
+
+    
+    <main>
+        <!-- Video Section -->
+        <video controls>
+            <source src="document_5807519142583998279.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <!-- Welcome Section Below Video -->
+        <div class="welcome-section">
+            <h2>Welcome to Amaala</h2>
+            <p>Amaala is a luxurious tourism destination located along the Red Sea coast of Saudi Arabia. Designed to reflect the beauty of the region, Amaala offers a unique blend of wellness, sustainability, and environmental preservation, making it a perfect destination for exclusive, eco-friendly experiences.</p>
+        </div>
+
+        <!-- Content Sections -->
+        <div class="content-section">
+            <h2>What is Amaala?</h2>
+            <p>Amaala is an exciting luxury tourism development project located on the northwestern coast of Saudi Arabia. It is part of Saudi Arabia’s Vision 2030, aimed at transforming the economy by boosting tourism and entertainment sectors. The project is centered on wellness, sustainability, and environmental conservation, catering to high-end travelers looking for an exclusive, eco-friendly experience.</p>
+        </div>
+
+        <div class="content-section">
+            <h2>Location</h2>
+            <p>Amaala is located in the Prince Mohammed bin Salman Nature Reserve, along the Red Sea coast. The region is known for its pristine beaches, crystal-clear waters, and stunning coral reefs. The natural beauty of this area makes it a perfect destination for luxury resorts and nature enthusiasts.</p>
+        </div>
+
+        <div class="content-section">
+            <h2>Amaala’s Vision</h2>
+            <p>Amaala is designed to become a global hub for health, wellness, and sustainable luxury. The project focuses on integrating wellness tourism with medical treatments, holistic therapies, and personalized health services. Alongside these, it will offer cultural, artistic, and marine-related experiences, making it a multifaceted luxury destination.</p>
+        </div>
+    </main>
+
+    <footer>
+        <p><i><b>For more information, visit the <a href="https://www.vision2030.gov.sa">Saudi Vision 2030</a> website.</b></i></p>
+        <h5>© Sustainability and Technology: New Cities in Vision 2030 | All Rights Reserved</h5>
+        <p><h5>This page was last modified on: 
+            <script>
+              document.write(document.lastModified);
+            </script>
+    </footer>
+</body>
+</html>

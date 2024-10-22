@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Al-Qiddiyah - Explore AlUla</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        /* الشريط العلوي */
+        header {
+            background-color: #000; /* شريط باللون الأسود */
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        /* تنسيق الأزرار في الشريط العلوي */
+        .nav-left {
+            display: flex;
+            gap: 20px; /* مسافة بين أزرار "Home" و "Back Page" */
+        }
+
+        .nav-right {
+            margin-left: auto; /* دفع "Next Page" إلى أقصى اليمين */
+        }
+
+        button {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        button:hover {
+            color: #ffcc00;
+        }
+
+        /* المحتوى الرئيسي - تنظيم الشبكة بصفين وكل صف يحتوي على عنصرين */
+        main {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* جعل المحتوى 2x2 */
+            gap: 30px;
+            padding: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        main div {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        main div:hover {
+            transform: translateY(-10px);
+        }
+
+        main img {
+            width: 100%;
+            height: auto;
+            border-bottom: 3px solid #ffcc00;
+        }
+
+        main p {
+            padding: 15px;
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        main p:first-of-type {
+            font-weight: bold;
+            font-size: 1.3em;
+            color: #333;
+        }
+
+        /* الفوتر */
+        footer {
+            background-color: #000;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- الشريط العلوي -->
+    <header>
+        <div class="nav-left">
+            <button onclick="location.href='Home.html'">Home</button>
+            <button onclick="location.href='page11.html'">Back Page</button>
+        </div>
+        <div class="nav-right">
+            <button onclick="location.href='lastpage.html'">Next Page</button>
+        </div>
+    </header>
+
+    <!-- المحتوى الرئيسي -->
+    <main>
+        <div>
+            <img src="image/photo_5816735876569483201_y.jpg" alt="ALHIJER">
+            <p>ALHIJER</p>
+            <p>Admire the spirit of creativity that characterized the Nabataean era with the decorations carved with great skill on the tombs that embodied the gods, and discover the masterpieces of architecture from wells and water channels carved into the heart of the rocks.</p>
+        </div>
+        <div>
+            <img src="image/photo_5816735876569483204_y.jpg" alt="Gramil">
+            <p>Gramil</p>
+            <p>The Gramil area is distinguished by its pitch black night with millions of stars twinkling in the enchanting sky, and its brilliance reflected on the most wonderful rocky wonders.</p>
+        </div>
+        <div>
+            <img src="image/photo_5816735876569483202_y.jpg" alt="Hall of Mirrors">
+            <p>HALL OF MIRRORS</p>
+            <p>It hosts many distinguished artistic and entertainment events to carve AlUla's name as a world-class cultural center. This architectural masterpiece is considered the largest mirror-covered building in the world.</p>
+        </div>
+        <div>
+            <img src="image/photo_5816735876569483207_y.jpg" alt="Elephant Mountain">
+            <p>ELEPHANT MOUNTAIN</p>
+            <p>Elephant Mountain perches on the golden sands of the desert with a breathtaking view, embracing the sky of AlUla with its body and trunk.</p>
+        </div>
+    </main>
+
+    <!-- الفوتر -->
+    <footer>
+        <p><i><b>For more information, visit the <a href="https://www.vision2030.gov.sa">Saudi Vision 2030</a> website.</b></i></p>
+        <p>© Sustainability and Technology: New Cities in Vision 2030 | All Rights Reserved</p>
+        <p><h5>This page was last modified on: 
+            <script>
+              document.write(document.lastModified);
+            </script>
+    </footer>
+
+</body>
+</html>

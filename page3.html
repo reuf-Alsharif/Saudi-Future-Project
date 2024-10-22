@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEOM</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #FFFFFF;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Navigation Bar Styles */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            background-color: #000000;
+            padding: 15px;
+            color: white;
+        }
+
+        .navbar .left-links {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px; /* Reduced padding to match smaller font size */
+            font-size: 14px; /* Smaller font size for the buttons */
+        }
+
+        .navbar a:hover {
+            background-color: #575757;
+            border-radius: 4px;
+        }
+
+        /* Main Content Container */
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            align-items: center;
+            flex: 1; /* Ensure container takes up remaining space */
+        }
+
+        .left {
+            width: 60%;
+            padding-right: 20px;
+        }
+
+        .right {
+            width: 35%;
+        }
+
+        .welcome-above-image {
+            font-size: 28px;
+            font-weight: bold;
+            color: #000;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .map-image {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .info {
+            font-size: 40px;
+            line-height: 1.5;
+            color: #000080;
+            margin: 10px 0;
+        }
+
+        .small-info {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        /* Footer Styles */
+        .footer {
+            margin-top: 40px;
+            font-size: 18px;
+            line-height: 1.8;
+            color: #000000;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer {
+            background-image: url('image/photo_5807514465820854640_y.jpg');
+            background-size: cover;
+            background-position: center;
+            color: rgb(255, 255, 255);
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer p {
+            margin: 0;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Icon Styles */
+        .navbar .icon {
+            font-size: 14px; /* Smaller font size for icons */
+            margin-right: 10px;
+        }
+
+        .navbar .icon:hover {
+            color: #ddd;
+        }
+
+        /* Video Styles */
+        .video-container {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .video-container iframe {
+            width: 80%; /* Increased video size */
+            height: 600px; /* Adjusted height for larger video */
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <div class="left-links">
+            <a href="home.html" class="icon">Home</a>
+            <a href="page2.html" class="icon">Previous Page</a> <!-- Back button next to Home -->
+        </div>
+        <a href="page4.html" class="icon">Next Page</a> <!-- Next link aligned to the right -->
+    </div>
+    
+    <!-- Main Content -->
+    <div class="container">
+        <div class="left">
+            <div class="welcome-above-image">Welcome to NEOM</div>
+            <img src="image/photo_5807514465820854640_y.jpg" alt="NEOM Map" class="map-image">
+        </div>
+        <div class="right">
+            <div class="info">468 km</div>
+            <div class="small-info">Total coastline length</div>
+            <div class="info">26,500 km²</div>
+            <div class="small-info">Area almost equal to Belgium</div>
+            <div class="info">41</div>
+            <div class="small-info">Number of islands</div>
+        </div>
+    </div>
+
+    <!-- Video Section -->
+    <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/z2Fy4e-ZUb8?si=e9BcdoLUfewqTUrd" title="NEOM Video" allowfullscreen></iframe>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer">
+        NEOM is located in the northwest of Saudi Arabia. It features a temperate climate and diverse topography, including sunny beaches and mountains covered in snow during winter. NEOM's unique location will provide residents with an exceptional living experience, with 95% of its land reserved for nature and the environment.
+    </div>
+
+    <footer>
+        < <p><i><b>For more information, visit the <a href="https://www.vision2030.gov.sa">Saudi Vision 2030</a> website.</b></i></p>
+        <p>© Sustainability and Technology: New Cities in Vision 2030 | All Rights Reserved</p>
+        <p><h5>This page was last modified on: 
+            <script>
+              document.write(document.lastModified);
+            </script>
+    </footer>
+
+</body>
+</html>

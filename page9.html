@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Red Sea Project</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        /* فيديو الخلفية */
+        .video-container {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .background-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* المحتوى على يسار الفيديو */
+        .content-overlay-left {
+            position: absolute;
+            top: 0;
+            left: 20px;
+            width: 35%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 10px;
+            color: white;
+            background: rgba(255, 251, 251, 0); /* تأثير التعتيم */
+        }
+
+        .content-overlay-left h1 {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+        }
+
+        .scroll-button {
+            padding: 10px 20px;
+            background-color: #004f4f;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            transition: background-color 0.3s ease;
+        }
+
+        .scroll-button:hover {
+            background-color: #ffcc00;
+            color: #004f4f;
+        }
+
+        /* المحتوى الرئيسي */
+        #content {
+            padding: 60px 0;
+            background-color: #f5f5f5;
+        }
+
+        /* المربعات المنفصلة للمحتوى */
+        .content-box {
+            position: relative;
+            margin: 40px auto;
+            max-width: 1000px;
+            height: 300px;
+            border-radius: 15px;
+            overflow: hidden;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .content-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* الشفافية */
+        }
+
+        .content-inner {
+            position: relative;
+            z-index: 1;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .content-inner h2 {
+            font-size: 2em;
+            margin-bottom: 15px;
+        }
+
+        .content-inner p {
+            font-size: 1.2em;
+        }
+
+        /* الفوتر */
+        footer {
+            background-color: #000000;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* شريط التنقل */
+        nav {
+            background-color: #000000; /* خلفية سوداء */
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        nav a {
+            color: #ffffff; /* نص أبيض */
+            text-decoration: none;
+            padding: 8px 15px;
+            transition: background-color 0.3s;
+            font-size: 1.1em;
+        }
+
+        nav a:hover {
+            background-color: #ffcc00; /* خلفية صفراء عند التمرير */
+            color: #000;
+        }
+
+        /* تنظيم الأزرار */
+        .nav-left {
+            display: flex;
+            gap: 10px; /* مسافة بين "Home" و "Back Page" */
+        }
+
+        .nav-right {
+            margin-left: auto; /* يدفع "Next Page" إلى أقصى اليمين */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- شريط التنقل -->
+    <nav>
+        <div class="nav-left">
+            <a href="Home.html">Home</a>
+            <a href="page8.html">Back Page</a>
+        </div>
+        <div class="nav-right">
+            <a href="page10.html">Next Page</a>
+        </div>
+    </nav>
+
+    <!-- فيديو الخلفية -->
+    <div class="video-container">
+        <video autoplay muted loop class="background-video">
+            <source src="REDSEA (1).mp4" type="video/mp4">
+            المتصفح الخاص بك لا يدعم عرض الفيديو.
+        </video>
+        <!-- المحتوى على يسار الفيديو -->
+        <div class="content-overlay-left">
+            <h1>Welcome to The Red Sea Project</h1>
+            <a href="#content" class="scroll-button">Explore More</a>
+        </div>
+    </div>
+
+    <!-- المحتوى الرئيسي -->
+    <div id="content">
+
+        <!-- القسم الأول: الرؤية والرسالة -->
+        <div class="content-box" style="background-image: url('imge/RS.jpeg');">
+            <div class="content-inner">
+                <h2>Vision & Mission</h2>
+                <p>Our vision is to become the world's most responsible developer by trailblazing new global standards that see built environments become enablers for social and ecological transformation.</p>
+            </div>
+        </div>
+
+        <!-- القسم الثاني: الطبيعة -->
+        <div class="content-box" style="background-image: url('imge/The Red Sea22.jpg');">
+            <div class="content-inner">
+                <h2>Nature's Wonders</h2>
+                <p>Experience the breathtaking natural landscapes of the Red Sea, from pristine beaches to lush mangroves and vibrant coral reefs.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p><i><b>For more information, visit the <a href="https://www.vision2030.gov.sa">Saudi Vision 2030</a> website.</b></i></p>
+        <p>© Sustainability and Technology: New Cities in Vision 2030 | All Rights Reserved</p>
+        <p><h5>This page was last modified on: 
+            <script>
+              document.write(document.lastModified);
+            </script>
+    </footer>
+
+</body>
+</html>

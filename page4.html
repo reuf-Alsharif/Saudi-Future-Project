@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Objectives</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('image/photo_5807514465820854641_y.jpg'); /* Set background image */
+            background-size: cover; /* Cover the entire page */
+            background-repeat: no-repeat; /* No repeat */
+            background-position: center; /* Center the image */
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ensure the body takes at least full viewport height */
+        }
+        nav {
+            background-color: rgba(0, 0, 0, 0.7); /* Dark navigation bar with transparency */
+            color: white; /* Link color */
+            padding: 10px 20px; /* Padding for nav */
+            display: flex; /* Flexbox for navigation */
+            justify-content: space-between; /* Space between links */
+        }
+        nav a {
+            color: white; /* Link color */
+            text-decoration: none; /* Remove underline */
+            margin: 0 10px; /* Margin for links */
+        }
+        nav a:hover {
+            text-decoration: underline; /* Underline on hover */
+        }
+        header {
+            text-align: center; /* Center header content */
+            margin-bottom: 20px; /* Space below header */
+        }
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* Text shadow */
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+            padding: 10px; /* Padding for title */
+            display: inline-block; /* Fit background to content */
+            border-radius: 8px; /* Rounded corners for title */
+        }
+        .content {
+            display: flex; /* Flexbox for content */
+            align-items: center; /* Center items vertically */
+            justify-content: center; /* Center items horizontally */
+            margin: 20px; /* Margin around content */
+        }
+        .image-container {
+            margin-right: 50px; /* Space on right for image */
+        }
+        .image-container img {
+            max-width: 250px; /* Increased max width for the image */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 8px; /* Rounded corners */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Shadow for image */
+        }
+        section {
+            margin: 20px; /* Margin around each section */
+            padding: 20px; /* Padding inside each section */
+            border-radius: 8px; /* Rounded corners for each section */
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background for each section */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Shadow for each section */
+        }
+        .info-card {
+            padding: 20px; /* Padding inside the card */
+            border-radius: 8px; /* Rounded corners for the card */
+            background-color: rgba(240, 240, 240, 0.9); /* Light background for the card */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Shadow for the card */
+            margin: 20px 0; /* Margin for spacing */
+            display: flex; /* Flexbox for card content */
+            align-items: center; /* Center items vertically */
+        }
+        .info-card img {
+            max-width: 100px; /* Small size for the info icon */
+            margin-right: 10px; /* Space between image and text */
+            cursor: pointer; /* Pointer cursor for clickable image */
+        }
+        table {
+            width: 100%; /* Width of table */
+            margin: 20px auto; /* Center the table */
+            border-collapse: collapse; /* Merge table borders */
+            background-color: rgba(255, 255, 255, 0.9); /* Background for table with transparency */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Shadow for table */
+        }
+        table, th, td {
+            border: 1px solid #333; /* Borders for table */
+        }
+        th, td {
+            padding: 15px; /* Padding for table cells */
+            text-align: left; /* Align text to the left */
+        }
+        th {
+            background-color: #f2f2f2; /* Background for table header */
+            text-shadow: none; /* Remove shadow from header text */
+        }
+        footer {
+            background-color: rgba(0, 0, 0, 0.8); /* Dark footer with transparency */
+            color: white; /* Footer text color */
+            text-align: center; /* Center footer text */
+            padding: 10px 0; /* Padding for footer */
+            margin-top: auto; /* Push footer to the bottom */
+        }
+        /* Modal Styles */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgba(0,0,0,0.7); /* Black with opacity */
+            padding-top: 60px; /* Location of the box */
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto; /* 15% from the top and centered */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%; /* Could be more or less, depending on screen size */
+            border-radius: 8px; /* Rounded corners for modal */
+        }
+        .close {
+            color: #aaa;
+            float: right; /* Float the close button to the right */
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer; /* Pointer cursor for close button */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div>
+            <a href="home.html">Home</a>
+            <a href="page3.html">Previous Page</a>
+        </div>
+        <div>
+            <a href="page5.html">Next Page</a>
+        </div>
+    </nav>
+
+    <div class="content">
+        <div class="image-container">
+            <img src="image/photo_5807514465820854639_x.jpg" alt="Project Image"> <!-- Increased size -->
+        </div>
+    </div>
+
+    <!-- Objectives Section -->
+    <section>
+        <table>
+            <tr>
+                <th>Objectives</th>
+            </tr>
+            <tr>
+                <td>Establish new standards for public health and environmental protection.</td>
+            </tr>
+            <tr>
+                <td>Build a new model for sustainability.</td>
+            </tr>
+            <tr>
+                <td>Make NEOM a global destination for living and working, fostering a culture of exploration and adventure.</td>
+            </tr>
+            <tr>
+                <td>Develop and diversify the kingdom's economy, placing it on the global leadership map for development and innovation.</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- Additional Information Section -->
+    <section>
+        <h2>Additional Information</h2>
+        <div class="info-card">
+            <img src="image/w=1200,h=800.avif" alt="Info Icon" onclick="showModal()"/> <!-- Replace with your info icon path -->
+            <div>
+                <p><strong>NEOM</strong> aims to revolutionize urban living by integrating advanced technologies and sustainable practices to create a better future.</p>
+                <p>The project will include a variety of sectors such as mobility, biotech, food, and entertainment, attracting global investment and talent.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for Additional Information -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>More Information</h2>
+            <p>NEOM is not just a project; it's a vision for the future. By integrating cutting-edge technologies and sustainable practices, NEOM will lead the way in urban living. The diverse sectors within NEOM, including biotech, food, and entertainment, will create a vibrant ecosystem attracting talent and investment worldwide.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p><i><b>For more information, visit the <a href="https://www.vision2030.gov.sa">Saudi Vision 2030</a> website.</b></i></p>
+        <p>© Sustainability and Technology: New Cities in Vision 2030 | All Rights Reserved</p>
+        <p><h5>This page was last modified on: 
+            <script>
+              document.write(document.lastModified);
+            </script>
+    </footer>
+
+    <script>
+        // Modal script
+        function showModal() {
+            document.getElementById("myModal").style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+        }
+
+        // Close modal when clicking outside of it
+        window.onclick = function(event) {
+            var modal = document.getElementById("myModal");
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

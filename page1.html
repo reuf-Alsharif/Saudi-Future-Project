@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Line Project</title>
+    <style>
+        body {
+            background-image: url('image/ذا-لاين-653x1024.jpeg'); /* تعيين الصورة كخلفية */
+            background-size: cover; /* تغطي الصورة الصفحة بالكامل */
+            background-repeat: no-repeat; /* عدم تكرار الصورة */
+            background-position: center; /* مركز الصورة */
+            color: white; /* لون النص الأبيض لزيادة التباين */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background-color: #000000;/* لون خلفية الشريط مع شفافية */
+            padding: 10px;
+            display: flex;
+            justify-content: space-between; /* مساحة بين الروابط */
+            align-items: center;
+            color: white; /* لون النص الأبيض */
+        }
+
+        nav a {
+            margin: 0 15px; /* مساحة بين الروابط */
+            text-decoration: none; /* إزالة الخط السفلي */
+            color: white; /* لون النص الأبيض */
+        }
+
+        nav a:hover {
+            text-decoration: underline; /* وضع خط تحت النص عند التمرير */
+        }
+
+        header {
+            position: relative;
+            height: auto; /* ضبط الارتفاع تلقائياً ليتناسب مع المحتوى */
+            display: flex;
+            flex-direction: column; /* تغيير إلى عمود */
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.5); /* لون خلفية مع شفافية للنص */
+        }
+
+        .header-content h1 {
+            font-size: 3rem;
+            margin: 20px 0 0; /* إضافة مسافة فوق العنوان */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* ظل للنص */
+        }
+
+        .header-content p {
+            font-size: 1.5rem;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* ظل للنص */
+        }
+
+        .header-content img {
+            max-width: 70%; /* حجم الصورة أصغر */
+            height: auto;
+            margin: 20px 0; /* مساحة بين النص والصورة */
+        }
+
+        section {
+            padding: 20px;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8); /* لون خلفية مع شفافية */
+            color: black; /* إعادة لون النص الأسود للمحتوى */
+            border-radius: 10px; /* زوايا مستديرة */
+        }
+
+        .features {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .feature {
+            flex: 1;
+            margin: 10px;
+        }
+
+        .feature h3 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        hr {
+            border: 1px solid #ddd; /* حدود خفيفة */
+            margin: 20px 0; /* مساحة حول الخط */
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.8); /* لون خلفية خفيف مع شفافية */
+            padding: 10px;
+            text-align: center;
+            color: rgb(246, 246, 246); /* لون النص الأسود في الفوتر */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+       
+        <div>
+            <a href="home.html">Home</a>
+            
+        </div>
+        <div>
+            <a href="page2.html">Next Page</a>
+        </div>
+    </nav>
+
+    <header>
+        <div class="header-content">
+            <img src="image/NEOMMAIN.jpeg" alt="NEOM Main Image">
+            <h1>Welcome to The Line</h1>
+            <p>The Future of Urban Living</p>
+        </div>
+    </header>
+
+    <section class="image-section">
+        <h2>About The Line</h2>
+        <p>
+            The Line is a revolutionary urban development located in NEOM, Saudi Arabia. It is a linear city designed to accommodate millions of residents while ensuring a sustainable and eco-friendly future.
+        </p>
+    </section>
+    
+    <hr>
+
+    <section>
+        <h2>Innovative Urban Living</h2>
+        <div>
+            <h3>Ideal Climate Year-Round</h3>
+            <p>
+                The Line has been meticulously designed to enjoy an ideal environment with sufficient spaces to create a local climate that maximizes sunlight, natural airflow, and shade while establishing a natural balance in air movement. Additionally, the open green spaces throughout the city will enhance comfort for all residents, visitors, and workers.
+            </p>
+        </div>
+
+        <hr>
+
+        <div>
+            <h3>More Time with Loved Ones</h3>
+            <p>
+                Everyone will be able to access all city facilities within a 5-minute walk, and the public transport network within the city will allow journeys between the farthest points in the city in no more than 20 minutes. AI technologies will enhance all automated services and ensure convenient amenities within the city for residents, making it easy to meet with family, friends, and loved ones, and enjoy longer times together.
+            </p>
+        </div>
+
+        <hr>
+
+        <div>
+            <h3>Fresh Air for Everyone</h3>
+            <p>
+                The city will be free from carbon emissions thanks to its abandonment of traditional infrastructure that heavily consumes carbon, such as cars and roads. The city will be powered entirely by 100% renewable energy, including powering its industries and sectors. The integration of nature with open spaces throughout the city will play a crucial role in air quality and purity.
+            </p>
+        </div>
+
+        <hr>
+
+        <div>
+            <h3>Direct Access to Nature</h3>
+            <p>
+                Our advanced design will allow for quick and direct access to nature within two minutes of walking through its open spaces at multiple levels and elevations, where everyone can easily access the surrounding nature and enjoy its stunning landscapes, towering mountains, and clear skies, in a city liberated from urban sprawl due to reduced infrastructure impacts.
+            </p>
+        </div>
+    </section>
+
+    <hr>
+
+    <section class="features">
+        <div class="feature">
+            <h3>Zero Cars</h3>
+            <p>Designed to reduce traffic congestion and air pollution.</p>
+        </div>
+        <div class="feature">
+            <h3>100% Renewable Energy</h3>
+            <p>The Line will run entirely on clean energy.</p>
+        </div>
+        <div class="feature">
+            <h3>Smart City</h3>
+            <p>Powered by artificial intelligence to ensure a futuristic lifestyle.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p><i><b>For more information, visit the <a href="https://www.vision2030.gov.sa">Saudi Vision 2030</a> website.</b></i></p>
+        <p>© Sustainability and Technology: New Cities in Vision 2030 | All Rights Reserved</p>
+        <p><h5>This page was last modified on: 
+            <script>
+              document.write(document.lastModified);
+            </script>
+    </footer>
+
+</body>
+</html>
+

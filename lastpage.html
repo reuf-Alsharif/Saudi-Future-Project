@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Evaluation - Dr.Areej</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+
+        /* الشريط العلوي */
+        header {
+            background-color: #000; /* شريط باللون الأسود */
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .nav-left {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-right {
+            margin-left: auto;
+        }
+
+        button {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        button:hover {
+            color: #4b4b4a;
+        }
+
+        /* المحتوى الرئيسي */
+        main {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        main h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        main p {
+            font-size: 1.2em;
+            color: #555;
+            margin-bottom: 40px;
+        }
+
+        /* نظام التقييم بالنجوم */
+        .rating {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .star {
+            font-size: 2.5em;
+            color: #ccc;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .star:hover,
+        .star.selected {
+            color: #ffcc00;
+        }
+
+        /* أسئلة التقييم */
+        .question {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .question label {
+            font-size: 1.2em;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .question input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        /* زر الإرسال */
+        .submit-btn {
+            background-color: #004f4f;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #767675;
+            color: #004f4f;
+        }
+
+        /* رسالة الشكر بعد الإرسال */
+        .thank-you-message {
+            display: none;
+            font-size: 2em;
+            margin-top: 30px;
+            color: #000000;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .thank-you-animation {
+            font-size: 4em;
+            color: #ff0000;
+            display: none;
+            margin-top: 20px;
+            animation: bounce 1s ease infinite;
+        }
+
+        /* الفوتر */
+        footer {
+            background-color: #000;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* الرسوم المتحركة */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- الشريط العلوي -->
+    <header>
+        <div class="nav-left">
+            <button onclick="location.href='home.html'">Home</button>
+            <button onclick="location.href='page12.html'">Back Page</button>
+        </div>
+        
+    </header>
+
+    <!-- المحتوى الرئيسي -->
+    <main>
+        <h1>Website Evaluation</h1>
+        <h2>Dear Dr.Areej, we highly value your feedback.</h2>
+        <p> Please evaluate our website and share your insights to help us improve.</p>
+    </p>
+        <!-- نظام التقييم بالنجوم -->
+        <div class="rating">
+            <span class="star" data-value="1">&#9733;</span>
+            <span class="star" data-value="2">&#9733;</span>
+            <span class="star" data-value="3">&#9733;</span>
+            <span class="star" data-value="4">&#9733;</span>
+            <span class="star" data-value="5">&#9733;</span>
+        </div>
+
+        <!-- أسئلة التقييم -->
+        <div class="question">
+            <label>How do you rate the website's design and layout?</label>
+            <input type="radio" name="design" value="1"> 1
+            <input type="radio" name="design" value="2"> 2
+            <input type="radio" name="design" value="3"> 3
+            <input type="radio" name="design" value="4"> 4
+            <input type="radio" name="design" value="5"> 5
+        </div>
+
+        <div class="question">
+            <label>How was the ease of navigation?</label>
+            <input type="radio" name="navigation" value="1"> 1
+            <input type="radio" name="navigation" value="2"> 2
+            <input type="radio" name="navigation" value="3"> 3
+            <input type="radio" name="navigation" value="4"> 4
+            <input type="radio" name="navigation" value="5"> 5
+        </div>
+
+        <div class="question">
+            <label>Did the content meet your expectations?</label>
+            <input type="radio" name="content" value="yes"> Yes
+            <input type="radio" name="content" value="no"> No
+        </div>
+
+        <!-- زر الإرسال -->
+        <button class="submit-btn" onclick="submitForm()">Submit Evaluation</button>
+
+        <!-- رسالة الشكر بعد الإرسال -->
+        <div class="thank-you-message" id="thankYouMessage">Thank you for your feedback!</div>
+        <div class="thank-you-animation" id="thankYouAnimation">&#10084;</div>
+    </main>
+
+    <!-- الفوتر -->
+    <footer>
+        <p><i><b>For more information, visit the <a href="https://www.vision2030.gov.sa">Saudi Vision 2030</a> website.</b></i></p>
+        <p>© Sustainability and Technology: New Cities in Vision 2030 | All Rights Reserved</p>
+        <p><h5>This page was last modified on: 
+            <script>
+              document.write(document.lastModified);
+            </script>
+    </footer>
+
+    <!-- سكريبت لتحديد النجوم -->
+    <script>
+        const stars = document.querySelectorAll('.star');
+        stars.forEach((star, idx) => {
+            star.addEventListener('click', () => {
+                stars.forEach((s, i) => {
+                    if (i <= idx) {
+                        s.classList.add('selected');
+                    } else {
+                        s.classList.remove('selected');
+                    }
+                });
+            });
+        });
+
+        // سكريبت لعرض رسالة الشكر والحركات اللطيفة
+        function submitForm() {
+            const thankYouMessage = document.getElementById('thankYouMessage');
+            const thankYouAnimation = document.getElementById('thankYouAnimation');
+            
+            thankYouMessage.style.display = 'block';
+            thankYouAnimation.style.display = 'block';
+
+            setTimeout(() => {
+                thankYouAnimation.style.display = 'none';
+            }, 3000); // إخفاء الأيقونة بعد 3 ثوانٍ
+        }
+    </script>
+
+</body>
+</html>
